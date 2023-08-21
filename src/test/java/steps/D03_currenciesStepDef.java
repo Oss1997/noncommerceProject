@@ -10,10 +10,6 @@ import pages.P03_homePage;
 
 public class D03_currenciesStepDef extends TestBase {
     P03_homePage P03_homePageObject = new P03_homePage(driver);
-    @Given("Go to Home Page")
-    public void go_to_home_page() {
-        P03_homePageObject.navigateToHomePage();
-    }
     @When("User Select Euro currency from the dropdown list on the top left of home page")
     public void user_select_euro_currency_from_the_dropdown_list_on_the_top_left_of_home_page() {
         P03_homePageObject.selectEuroCurrency();

@@ -12,11 +12,6 @@ import pages.P02_login;
 public class D02_loginStepDef extends TestBase {
     P03_homePage P03_homePageObject = new P03_homePage(driver);
     P02_login P02_loginObject = new P02_login(driver);
-
-    @Given("User Go To home page")
-    public void user_go_to_home_page() {
-       P03_homePageObject.navigateToHomePage();
-    }
     @When("User Clicks on Login Button")
     public void user_clicks_on_login_button() {
         P03_homePageObject.clickOnLoginButton();
@@ -33,10 +28,6 @@ public class D02_loginStepDef extends TestBase {
     public void user_press_on_login_button() {
        P02_loginObject.clickOnLoginButton();
         Assert.assertEquals(driver.findElement(By.xpath("//a[@class='ico-account']")).getText(),"My account");
-    }
-    @Given("User in home page")
-    public void user_in_home_page() {
-        P03_homePageObject.navigateToHomePage();
     }
     @When("User Enter on Login Button")
     public void userEnterOnLoginButton() {
